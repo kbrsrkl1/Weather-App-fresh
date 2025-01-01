@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+#video{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.container{
+    background-color: #ffffff0c;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, .25);
+    margin-top: 500px;
+    text-align: center;
+    max-width: 650px;
+    max-height: 650px;
+    margin: 120px auto;
+    padding: 15px 15px;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+form input[type="text"]{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 60%;
+    position: relative;
+    z-index: 3000;
+}
+
+
+form input[type="submit"]{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .3s ease;
+} 
+
+
+form input[type="submit"]:hover{
+    background-color: #0062cc;
+}
+
+
+.icon img{
+    width: 125px;
+    height: 125px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.temprature{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.description{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.details{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.details .weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-right: 40px;
+}
+
+.details > div{
+    padding: 20px;
+    background-color: #f1f1f152;
+    margin: 10px;
+    border-radius: 50px;
+    flex: 1;
+    text-align: center;
+    min-height:45px;
+}
+
+@media (max-with: 768px){
+    form{
+        flex-direction: column;
+    }
+
+
+    form input[type="text"]{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

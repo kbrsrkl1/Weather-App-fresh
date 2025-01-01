@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -16,16 +17,17 @@
         </form>
         <div id="weather-data">
             <div class="icon">
-                <img src="http://openweathermap.org/img/wn/01d.png" alt="Wather Icon">
+                <img src="http://openweathermap.org/img/wn/03d.png" alt="Wather Icon">
             </div>
-            <div class="temperature">22℃</div>
+            <div class="temprature">22℃</div>
             <div class="description">Sunny</div>
             <div class="details">
-                <div>Feels like: 23℃</div>
-                <div>Humidity: 40%</div>
-                <div>Wind Speed</div>
-                <div>Wind Speed: 5 m/s</div>
+                <div class="weather">Feels like: 23℃</div>
+                <div class="weather">Humidity: 40%</div>
+                <div class="weather">Wind Speed: 5 m/s</div>
             </div>
+            <video id="video" autoplay muted loop>
+                <source src="sky.mp4" type="video/mp4">
         </div>
     </div>
 </body>
