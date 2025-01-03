@@ -39,6 +39,9 @@
                     <source src="sun1.mp4" type="video/mp4">
                 </video>
                 <video id="video" muted style="display: none;">
+                    <source src="rain.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
                     <source src="snow.mp4" type="video/mp4">
                 </video>
                 <video id="video" muted style="display: none;">
@@ -62,6 +65,9 @@
                 if (i + 1 < videos.length) {;
                     videos[i + 1].style.display = 'block'; // Sonraki video gösterilir
                     videos[i + 1].play(); // Sonraki video başlatılır
+                }else{
+                    videos[0].style.display = 'block';
+                    videos[0].play();
                 }
             });
         }
