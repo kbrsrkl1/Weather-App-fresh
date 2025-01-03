@@ -25,10 +25,47 @@
                 <div class="weather">Feels like: 23℃</div>
                 <div class="weather">Humidity: 40%</div>
                 <div class="weather">Wind Speed: 5 m/s</div>
-            </div>
-            <video id="video" autoplay muted loop>
-                <source src="sky.mp4" type="video/mp4">
+            </div>                
+                <video id="video" autoplay muted>
+                    <source src="sky.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
+                    <source src="win.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
+                    <source src="sun.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
+                    <source src="sun1.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
+                    <source src="snow.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
+                    <source src="snow1.mp4" type="video/mp4">
+                </video>
+                <video id="video" muted style="display: none;">
+                    <source src="snow2.mp4" type="video/mp4">
+                </video>
         </div>
     </div>
+    <script src="index.js"></script>
+    <script>
+        const videos = document.querySelectorAll('video');
+
+        // Art arda oynatma
+        for (let i = 0; i < videos.length; i++) {
+
+            videos[i].addEventListener('ended', () => {
+                videos[i].style.display = 'none';
+                // Oynayan video gizlenir
+                if (i + 1 < videos.length) {;
+                    videos[i + 1].style.display = 'block'; // Sonraki video gösterilir
+                    videos[i + 1].play(); // Sonraki video başlatılır
+                }
+            });
+        }
+    </script>
+    <script src="index.js"></script>
 </body>
 </html>
