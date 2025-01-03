@@ -24,8 +24,21 @@ async function getWeatherData(cityValue){
 
         const temperature =  Math.round(data.main.temp)
 
-        const description 
-    } catch (error){
-        
-    }
+        const description = data.weather[0].description
+
+        const icon =  data.weather[0].icon
+
+        const details = [
+            `Feels like: ${Math.round(data.main.feels_like)}`,
+            `Humidity: ${data.main.humidity}`,
+            `Wind speed: ${data.wind.humidity}`,
+        ]
+
+        weatherDataEl.querySelector(".icon").innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" alt="Wather Icon">`
+
+        weatherDataEl.querySelector(".temperature").textContent = `${temperature}℃`
+
+        weatherDataEl.querySelector(".description").textContent = description[0].toUpperCase() + description.slice(1);
+        weatherDataEl.querySelector(".details").innerHTML =  details.map((detail) =>`<div class="weather">${detail}</div>`).join("");
+    } catch (error){}
 }
